@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         UpdateScore(0);
-        //dontdestroyonload
+        DontDestroyOnLoad(scoreText);
     }
 
 
@@ -23,5 +23,10 @@ public class ScoreManager : MonoBehaviour
         Debug.Log("collected");
         score += points;
         scoreText.text = "Score: " + score;
+    }
+
+    public int GetScore()
+    {
+        return score; 
     }
 }

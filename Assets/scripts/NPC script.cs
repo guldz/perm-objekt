@@ -13,6 +13,8 @@ public class NPCscript : MonoBehaviour
     public GameObject contButton;
     public float wordSpeed;
     public bool playerIsClose;
+
+    public ScoreManager scoreManager;
      
     void Update()
     {
@@ -24,6 +26,7 @@ public class NPCscript : MonoBehaviour
             }
             else
             {
+                
                 dialougePanel.SetActive(true);
                 StartCoroutine(Typing()); 
             }
